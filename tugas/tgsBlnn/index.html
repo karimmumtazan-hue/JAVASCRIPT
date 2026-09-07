@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Voting App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <div class="logo-title">
+                <span class="logo-icon">🗳️</span>
+                <span>Mini Voting App</span>
+            </div>
+            <p class="subtitle">What should we build next? 🚀</p>
+        </div>
+
+        <div class="voting-grid">
+            
+            <div class="card">
+                <div class="card-icon">🎮</div>
+                <div class="card-title">Mini Game</div>
+                <div class="card-votes" id="gameVotes">Votes: 0</div>
+                <button class="btn-vote" id="gameBtn">Vote 🎮</button>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🛒</div>
+                <div class="card-title">Mini Store</div>
+                <div class="card-votes" id="storeVotes">Votes: 0</div>
+                <button class="btn-vote" id="storeBtn">Vote 🛒</button>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📝</div>
+                <div class="card-title">To-Do App</div>
+                <div class="card-votes" id="todoVotes">Votes: 0</div>
+                <button class="btn-vote" id="todoBtn">Vote 📝</button>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🧠</div>
+                <div class="card-title">Quiz App</div>
+                <div class="card-votes" id="quizVotes">Votes: 0</div>
+                <button class="btn-vote" id="quizBtn">Vote 🧠</button>
+            </div>
+        </div>
+
+        <div class="summary-box">
+            <div class="total-votes" id="totalVotesText">Total Votes: 0</div>
+            <div class="status-alert" id="feedbackAlert">
+                <span>✅ Kamu Belum Melilih</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
