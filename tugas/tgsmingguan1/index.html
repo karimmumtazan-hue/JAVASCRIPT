@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HSI Student Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header Banner -->
+    <header class="header-banner">
+      <div class="header-title">
+        <p class="subtitle">HSI BOARDING SCHOOL • WEB PROGRAMMING</p>
+        <h1>🎓 HSI Student Management</h1>
+      </div>
+      <div class="badge-phase">
+        <span>Phase 4</span>
+        <small>Dynamic UI + Storage</small>
+      </div>
+    </header>
+
+    <div id="alert-box" class="alert hidden"></div>
+
+    <main class="grid-container">
+      <!-- Card Form -->
+      <section class="card">
+        <h2 id="form-title">➕ Tambah Siswa</h2>
+        <form id="student-form">
+          <input type="hidden" id="student-index" value="">
+
+          <div class="form-group">
+            <label for="student-name">Nama Siswa</label>
+            <input type="text" id="student-name" placeholder="Contoh: Ahmad" required>
+          </div>
+
+          <div class="form-group">
+            <label for="student-score">Nilai</label>
+            <input type="number" id="student-score" min="0" max="100" placeholder="0 - 100" required>
+          </div>
+
+          <div class="button-group">
+            <button type="submit" id="btn-submit" class="btn btn-primary">➕ Tambah Siswa</button>
+            <button type="button" id="btn-cancel" class="btn btn-secondary hidden">🚫 Batal</button>
+          </div>
+        </form>
+
+        <div class="form-note">
+          💡 Data yang ditambahkan akan masuk ke array JavaScript, kemudian UI dirender ulang dan disimpan ke browser.
+        </div>
+      </section>
+
+      <!-- Card Daftar Siswa & Statistik -->
+      <section class="card">
+        <div class="card-header-flex">
+          <h2>📑 Daftar Siswa</h2>
+          <span class="badge-ls">💾 LocalStorage</span>
+        </div>
+
+        <div id="student-list" class="student-list">
+          <!-- Data siswa di-render di sini -->
+        </div>
+
+        <!-- Section Statistik -->
+        <div class="stats-container">
+          <div class="stat-box">
+            <span class="stat-label">Total Siswa</span>
+            <span id="total-students" class="stat-value">0</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-label">Rata-rata Nilai</span>
+            <span id="average-score" class="stat-value">0</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
